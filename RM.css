@@ -1,0 +1,163 @@
+/* Definições Gerais - Início*/
+
+html {
+    background-color: rgb(220, 220, 220);
+    height: 100%;
+}
+
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Definições Gerais - fim*/
+
+/* CSS cabeçalho - Início */
+.cabecalho a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header.cabecalho {
+    background: rgb(90, 90, 90);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+ul>div>a {
+    border: rgb(50, 50, 50);
+    border-radius: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+#menuPerfil {
+    display: none;
+}
+#menuPerfil:checked~label i:nth-child(2) {
+    display: inline;
+}
+
+#menuPerfil:checked~label i:first-child {
+    display: none;
+}
+
+#menuPerfil:not(checked)~label i:nth-child(2) {
+    display: none;
+}
+
+#menuPerfil:not(checked)~label i:first-child {
+    display: inline;
+}
+
+#menuPerfil:checked~label :nth-child(3) {
+    display: inline;
+}
+
+#menuPerfil:not(checked)~label :nth-child(3) {
+    display: none;
+}
+
+#menuPerfil:checked~label :nth-child(4) {
+    display: none;
+}
+
+#menuPerfil:not(checked)~label :nth-child(4) {
+    display: inline;
+}
+#menuPerfil:checked{
+    grid-row: 1/2;
+}
+.AbaPerfil {
+    display: block;
+    color: whitesmoke;
+}
+
+/* CSS cabeçalho - Fim */
+
+
+/* CSS Conteúdo - Início */
+
+main>p {
+    text-align: justify;
+    padding: 5px;
+}
+
+.caixa-categoria>ul>li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+a.marca {
+    font-size: 150%;
+}
+
+/* CSS Conteúdo - Fim */
+
+
+/* CSS Rodapé - Início */
+
+.rodape {
+    background: rgb(90, 90, 90);
+    color: whitesmoke;
+}
+
+/* CSS Rodapé - Fim */
+
+
+/* CSS Grid - Início */
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50px repeat(2, 1fr);
+    padding: 5px;
+    grid-gap: 5px;
+}
+
+main {
+    grid-column: 1/5;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: rgb(50, 50, 50);
+    grid-row: 2/4;
+}
+
+aside {
+    grid-column: 5/6;
+}
+
+aside>div.caixa-pesquisa {
+    grid-row: 2/3;
+}
+
+aside>div.caixa-categoria {
+    grid-row: 3/4;
+}
+
+header.cabecalho {
+    grid-row: 1;
+    grid-column: 1/6;
+}
+
+.rodape {
+    grid-row: 4;
+    grid-column: 1/6;
+}
+
+/* CSS Grid - Fim */
