@@ -138,21 +138,11 @@ a.marca {
     padding: 8px;
     display: grid;
     grid-gap: 5px;
-    grid-template-rows: repeat(5, 200px);
-    grid-template-columns: 150px 1fr;
+    grid-template-rows: auto;
 }
-
-#espacoEmpresas div {
-    grid-row: 1;
-}
-
 #espacoEmpresas div * {
     display: flex;
     flex-wrap: wrap;
-}
-
-#espacoEmpresas div>p {
-    grid-column: 2/4;
 }
 
 #espacoEmpresas>div :last-child {
